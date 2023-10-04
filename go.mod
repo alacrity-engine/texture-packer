@@ -4,7 +4,6 @@ go 1.21.1
 
 require (
 	github.com/alacrity-engine/resource-codec v0.0.0-20230927165156-15c66c72a45f
-	github.com/go-gl/gl v0.0.0-20211210172815-726fda9656d6
 	go.etcd.io/bbolt v1.3.7
 	gopkg.in/yaml.v2 v2.4.0
 )

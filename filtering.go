@@ -1,16 +1,12 @@
 package main
 
-import (
-	"github.com/go-gl/gl/v4.6-core/gl"
-)
-
 func TextureFilteringByID(id string) uint32 {
 	switch id {
 	case "nearest":
-		return gl.NEAREST
+		return 0x2600
 
 	case "linear":
-		return gl.LINEAR
+		return 0x2601
 
 	default:
 		return 0
