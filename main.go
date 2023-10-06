@@ -61,7 +61,11 @@ func main() {
 					"the '%s' picture is absent", textureData.PictureID)
 			}
 
-			buck = tx.Bucket([]byte("textures"))
+			buck, err = tx.CreateBucketIfNotExists([]byte("textures"))
+
+			if err != nil {
+				return err
+			}
 
 			if buck == nil {
 				return fmt.Errorf("no textures bucket present")
@@ -81,6 +85,7 @@ func main() {
 
 			return nil
 		})
+		handleError(err)
 	}
 }
 
