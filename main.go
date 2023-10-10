@@ -44,7 +44,7 @@ func main() {
 
 	for _, entry := range entries {
 		traverseQueue.Enqueue(FileTracker{
-			EntryPath: ".",
+			EntryPath: projectPath,
 			Entry:     entry,
 		})
 	}
